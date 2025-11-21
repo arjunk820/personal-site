@@ -9,8 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#F8F9FA",
+        primary: {
+          text: "#3E2723",
+        },
+        secondary: {
+          text: "#5D4E46",
+        },
+        button: {
+          bg: "#3E2723",
+          text: "#F8F9FA",
+          hover: "#2A1810",
+        },
+        accent: "#5D4E46",
+      },
+      fontFamily: {
+        heading: ["Share Tech", "sans-serif"],
+        body: ["Inter", "sans-serif"],
       },
     },
   },

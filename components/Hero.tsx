@@ -8,32 +8,38 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Profile Photo */}
           <div className="flex-shrink-0">
-            <div className="w-48 h-48 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
-              {/* Placeholder - replace with actual image */}
-              <span className="text-4xl">AK</span>
+            <div className="w-48 h-48 rounded-full bg-secondary-text/10 overflow-hidden border-2 border-secondary-text/20 relative">
+              <Image
+                src="/images/linkedin.jpeg"
+                alt="Arjun Kantamsetty"
+                width={192}
+                height={192}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
           </div>
 
           {/* Content */}
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-5xl font-bold mb-4">Arjun Kantamsetty</h1>
-            <h2 className="text-2xl text-gray-600 dark:text-gray-400 mb-6">
-              Software Engineer & DJ
+            <h1 className="text-5xl font-heading font-bold mb-4 text-primary-text">Arjun Kantamsetty</h1>
+            <h2 className="text-2xl font-heading text-secondary-text mb-6">
+              Software Engineer
             </h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-2xl">
-              Building intelligent, scalable systems and creating music experiences. 
+            <p className="text-lg text-secondary-text mb-8 max-w-2xl">
+              Building intelligent, scalable systems. 
               Passionate about AI, software engineering, and the intersection of technology and creativity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
                 href="/projects"
-                className="px-6 py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+                className="px-6 py-3 bg-button-bg text-button-text rounded-lg hover:bg-button-hover transition-colors font-medium"
               >
                 View Projects
               </Link>
               <Link
                 href="/resume"
-                className="px-6 py-3 border-2 border-gray-900 dark:border-gray-100 text-gray-900 dark:text-gray-100 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                className="px-6 py-3 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text/5 transition-colors font-medium"
               >
                 View Resume
               </Link>
