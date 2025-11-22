@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Arjun Kantamsetty'",
+  title: "Arjun Kantamsetty",
   description: "Personal website of Arjun Kantamsetty",
   icons: {
     icon: "/images/arjun.png",
