@@ -11,8 +11,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Arjun Kantamsetty | Software Engineer",
-  description: "Personal website of Arjun Kantamsetty - Software/AI Engineer",
+  title: "Arjun Kantamsetty'",
+  description: "Personal website of Arjun Kantamsetty",
+  icons: {
+    icon: "/images/arjun.png",
+  },
 };
 
 export default function RootLayout({
