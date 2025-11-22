@@ -5,9 +5,9 @@ export interface Project {
   techStack: string[];
   period?: string;
   githubUrl?: string;
-  websiteUrl?: string; // Optional - project website
-  demoUrl?: string; // Optional - not all projects have live demos
-  award?: string; // Optional - for award-winning projects
+  websiteUrl?: string;
+  demoUrl?: string;
+  award?: string;
 }
 
 export const projects: Project[] = [

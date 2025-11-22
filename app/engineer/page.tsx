@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import WaveformBackground from "@/components/WaveformBackground";
 import ProjectCard from "@/components/ProjectCard";
 import ExperienceCard from "@/components/ExperienceCard";
@@ -39,7 +38,6 @@ export default function EngineerPage() {
                   Software Engineer
                 </h2>
                 <p className="text-lg text-secondary-text mb-8 max-w-2xl">
-                  Building intelligent, scalable systems and creating music experiences. 
                   Passionate about AI, software engineering, and the intersection of technology and creativity.
                 </p>
               </div>
