@@ -35,8 +35,7 @@ export const experiences: Experience[] = [
     period: "Aug. 2024 – Jan. 2025",
     location: "Austin, TX",
     description: [
-      "Leveraged LLMs to enhance the readability of API documentation by 30%, improving client comprehension and streamlining developer onboarding.",
-      "Integrated AI-driven documentation enhancements into existing engineering workflows, enabling faster product adoption and reducing support overhead for technical teams.",
+      "Built an LLM pipeline to enhance API documentation readability by 30%, reducing onboarding time for client developers and cybersecurity teams."
     ],
   },
 ];
