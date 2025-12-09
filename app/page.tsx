@@ -17,13 +17,13 @@ export default function Home() {
             href="/engineer"
             className="px-8 py-4 bg-button-bg text-button-text rounded-lg hover:bg-button-hover transition-colors font-medium text-lg min-w-[200px]"
           >
-            Enter as Engineer
+            Enter Engineer
           </Link>
           <Link
             href="/dj"
             className="px-8 py-4 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text/5 transition-colors font-medium text-lg min-w-[200px]"
           >
-            Enter as DJ
+            Enter DJ
           </Link>
         </div>
       </div>

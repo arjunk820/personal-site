@@ -13,7 +13,8 @@ export const experiences: Experience[] = [
     period: "May 2025 – Present",
     location: "Portland, ME",
     description: [
-      "Architected core components of a distributed training platform using JupyterHub, Ray, Kubernetes, and SageMaker, helping scale training and inference workloads across AKS and EKS.",
+      "Enabled distributed training for WEX’s modeling teams by creating autoscaling EKS nodepools with Karpenter, configuring Ray on AKS, and integrating SageMaker IAM to orchestrate CPU/GPU workloads across Kubernetes pods in multi-cloud environments.",
+      "Improved claims adjudication accuracy from 70% → 85% on date-of-service extraction within two weeks of joining the project, reducing manual review requirements by 2.25M claims annually.", 
       "Implemented an end-to-end observability stack with Helm, Kubernetes, and ArgoCD, delivering visibility across all environments for services supporting millions of customers — executed 3× faster than comparable organization initiatives.",
       "Led several company-wide trainings on building AI applications with RAG and multi-agent workflows, equipping both technical and non-technical teams with the skills to securely integrate AI into internal workflows; trained over 200 engineers across multiple departments.",
     ],
