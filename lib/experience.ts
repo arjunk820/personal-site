@@ -6,6 +6,7 @@ export interface Experience {
   description: string[];
 }
 
+// Update experiences section with current day resume lines
 export const experiences: Experience[] = [
   {
     company: "WEX",

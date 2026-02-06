@@ -10,6 +10,7 @@ export interface Project {
   award?: string;
 }
 
+// Add the newest projects here
 export const projects: Project[] = [
   {
     id: "upright",
@@ -19,7 +20,7 @@ export const projects: Project[] = [
     period: "Oct. 2025",
     websiteUrl: "https://upright.bio",
     demoUrl: "https://app.arcade.software/share/N9dFjg4aeWhAkvqBv7Iq",
-    githubUrl: "https://github.com/arjunk820",
+    githubUrl: "https://github.com/arjunk820", // TODO: Add github URL
   },
   {
     id: "opscopilot",

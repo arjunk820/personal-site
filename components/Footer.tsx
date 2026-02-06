@@ -31,7 +31,7 @@ export default function Footer() {
               LinkedIn
             </a>
             <a
-              href="https://soundcloud.com"
+              href="https://soundcloud.com" // TODO: Add soundcloud URL
               target="_blank"
               rel="noopener noreferrer"
               className={isDarkMode ? "text-white hover:text-white/80 transition-colors" : "text-primary-text hover:text-accent transition-colors"}
@@ -39,7 +39,7 @@ export default function Footer() {
               SoundCloud
             </a>
             <a
-              href="https://instagram.com"
+              href="https://instagram.com" // TODO: Add instagram URL
               target="_blank"
               rel="noopener noreferrer"
               className={isDarkMode ? "text-white hover:text-white/80 transition-colors" : "text-primary-text hover:text-accent transition-colors"}

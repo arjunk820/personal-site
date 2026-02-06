@@ -1,5 +1,5 @@
 import { Project } from "@/lib/projects";
-import Link from "next/link";
+import Link from "next/link"; // TODO: Remove if not needed
 
 interface ProjectCardProps {
   project: Project;

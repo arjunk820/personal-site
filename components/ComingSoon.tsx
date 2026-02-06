@@ -1,4 +1,4 @@
-interface ComingSoonProps {
+interface ComingSoonProps { // Move to a different file and import
   title: string;
   message: string;
   links?: Array<{ label: string; url: string }>;
