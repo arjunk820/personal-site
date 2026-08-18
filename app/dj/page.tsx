@@ -1,121 +1,96 @@
-"use client";
-
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
 import WaveformBackground from "@/components/WaveformBackground";
-import ComingSoon from "@/components/ComingSoon";
+import Reveal from "@/components/Reveal";
+import { site } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "DJ",
+  description: "Open-format DJ sets, mixes, and dates.",
+};
+
+const social = [
+  { label: "SoundCloud", url: site.links.soundcloud },
+  { label: "Instagram", url: site.links.instagram },
+].filter((l) => l.url);
 
 export default function DJPage() {
   return (
-    <div className="relative min-h-screen bg-black">
-      <WaveformBackground variant="dj" />
-      
-      <div className="relative z-10">
-        {/* Hero Section */}
-        <section id="hero" className="py-20 px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-7xl mx-auto relative z-10">
-            <div className="flex flex-col md:flex-row items-center gap-12">
-              <div className="flex-shrink-0">
-                <div className="w-48 h-48 rounded-full bg-white/10 overflow-hidden border-2 border-white/20 relative">
-                  <Image
-                    src="/images/linkedin.jpeg"
-                    alt="DJ"
-                    width={192}
-                    height={192}
-                    className="w-full h-full object-cover"
-                    priority
-                  />
-                </div>
-              </div>
+    <>
+      <WaveformBackground />
 
-              <div className="flex-1 text-center md:text-left">
-                <h1 className="text-6xl md:text-7xl font-heading font-bold mb-4 text-white">
-                  DJ
-                </h1>
-                <h2 className="text-3xl font-heading text-white/80 mb-6">
-                  I enjoy mixing music and listen and play all types of music → open-format.
-                </h2>
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* Scrim: keeps copy legible where the spectrum bars run bright. */}
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-0 z-[1] bg-[linear-gradient(100deg,rgba(8,8,10,0.94)_0%,rgba(8,8,10,0.82)_38%,rgba(8,8,10,0.25)_70%,transparent_100%)]"
+      />
 
-        {/* Coming Soon Section */}
-        <section id="coming-soon" className="py-20 px-4 sm:px-6 lg:px-8 bg-black/60 backdrop-blur-sm relative">
-          <div className="max-w-4xl mx-auto relative z-10">
-            <ComingSoon
-              title="DJ Content Coming Soon"
-              message="DJ content coming soon. Follow me on SoundCloud and Instagram for updates."
-              links={[
-                { label: "SoundCloud", url: "https://soundcloud.com" },
-                { label: "Instagram", url: "https://instagram.com" },
-              ]}
-              dark={true}
-            />
-          </div>
-        </section>
+      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-4rem)] max-w-6xl flex-col justify-center px-5 py-24 sm:px-8">
+        <Reveal>
+          <p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-300/70">
+            open format
+          </p>
+        </Reveal>
 
-        {/* Placeholder Sections */}
-        <section id="mixes" className="py-20 px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-7xl mx-auto relative z-10">
-            <h2 className="text-4xl font-heading font-bold mb-8 text-white text-center md:text-left">
-              Mixes & Sets
-            </h2>
-            <ComingSoon
-              title="Coming Soon"
-              message="My mixes and live sets will be available here soon."
-              dark={true}
-            />
-          </div>
-        </section>
+        <Reveal delay={80}>
+          <h1 className="display mt-6 text-[clamp(3rem,13vw,9rem)] leading-[0.85] text-fg">
+            <span className="bg-gradient-to-r from-cyan-300 via-fuchsia-400 to-amber-300 bg-clip-text text-transparent">
+              DJ
+            </span>{" "}
+            SET
+          </h1>
+        </Reveal>
 
-        <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 bg-black/60 backdrop-blur-sm relative">
-          <div className="max-w-7xl mx-auto relative z-10">
-            <h2 className="text-4xl font-heading font-bold mb-8 text-white text-center md:text-left">
-              Photos & Gallery
-            </h2>
-            <ComingSoon
-              title="Coming Soon"
-              message="Event photos and gallery coming soon."
-              dark={true}
-            />
-          </div>
-        </section>
+        <Reveal delay={160}>
+          <p className="mt-8 max-w-2xl text-xl leading-relaxed text-fg-muted sm:text-2xl">
+            I mix and listen to everything — no genre lane, no set list I won&apos;t abandon
+            two tracks in if the room wants something else.
+          </p>
+        </Reveal>
 
-        <section id="events" className="py-20 px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-7xl mx-auto relative z-10">
-            <h2 className="text-4xl font-heading font-bold mb-8 text-white text-center md:text-left">
-              Events
-            </h2>
-            <ComingSoon
-              title="Coming Soon"
-              message="Upcoming events and performances will be listed here."
-              dark={true}
-            />
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-black/60 backdrop-blur-sm relative">
-          <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h2 className="text-4xl font-heading font-bold mb-4 text-white">
-              Get In Touch
-            </h2>
-            <p className="text-lg text-white/80 mb-8">
-              Interested in collaborating or want to book me for a gig? Feel free to reach out.
-            </p>
-            <button
-              onClick={() => {
-                navigator.clipboard.writeText("arjunkan2003@gmail.com");
-                alert("Email copied to clipboard!");
-              }}
-              className="inline-block px-8 py-4 bg-white text-black rounded-lg hover:bg-white/90 transition-colors font-medium text-lg"
+        <Reveal delay={240}>
+          <div className="mt-12 flex flex-wrap items-center gap-3">
+            {social.map((l) => (
+              <a
+                key={l.label}
+                href={l.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-5 py-3.5 font-mono text-sm text-fg transition-colors hover:border-cyan-300/60 hover:text-cyan-300"
+              >
+                {l.label} <span aria-hidden>↗</span>
+              </a>
+            ))}
+            <a
+              href={`mailto:${site.email}?subject=Booking`}
+              className="inline-flex items-center gap-2 rounded-lg bg-fg px-5 py-3.5 font-mono text-sm text-ink transition-colors hover:bg-white"
             >
-              Contact Me
-            </button>
+              book a set
+            </a>
           </div>
-        </section>
+        </Reveal>
+
+        {social.length === 0 && (
+          <Reveal delay={300}>
+            {/* TODO: add SoundCloud + Instagram URLs in lib/site.ts and this note disappears. */}
+            <p className="mt-8 font-mono text-xs text-fg-faint">
+              [ mixes + dates going up here soon ]
+            </p>
+          </Reveal>
+        )}
+
+        <Reveal delay={360}>
+          <Link
+            href="/"
+            className="group mt-20 inline-flex items-center gap-2 font-mono text-sm text-fg-faint transition-colors hover:text-fg"
+          >
+            <span aria-hidden className="inline-block transition-transform group-hover:-translate-x-1">
+              ←
+            </span>
+            back to the engineering side
+          </Link>
+        </Reveal>
       </div>
-    </div>
+    </>
   );
 }
-

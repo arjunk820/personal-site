@@ -1,26 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
-
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
+@tailwind components;
 
-html {
-  scroll-behavior: smooth;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Sticky navbar is 4rem; keep anchored sections clear of it. */
+    scroll-padding-top: 5.5rem;
+  }
 
-body {
-  color: #3E2723;
-  background: #F8F9FA;
-  font-family: "Inter", sans-serif;
-}
+  body {
+    @apply bg-ink text-fg font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Share Tech", sans-serif;
-}
+  ::selection {
+    background: #ffb84d;
+    color: #08080a;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  :focus-visible {
+    outline: 2px solid #ffb84d;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #08080a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #23232b;
+    border: 2px solid #08080a;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a3a45;
   }
 }
 
+@layer components {
+  /* Small uppercase monospace label used for section eyebrows and metadata. */
+  .label {
+    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-fg-faint;
+  }
+
+  /* Headline sizing shared by the hero and section titles. */
+  .display {
+    @apply font-sans font-semibold tracking-[-0.03em];
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
